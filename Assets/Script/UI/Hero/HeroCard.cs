@@ -20,6 +20,6 @@ public class HeroCard : MonoBehaviour
 
     public void SetHeroData(HeroData kData)
     {
-        
+        m_HeroName.text = kData.name;
     }
 }
