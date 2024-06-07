@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Logic\AssetBundleManager.cs" />
+    <Compile Include="Assets\Script\UI\TestUI_Load.cs" />
     <Compile Include="Assets\Script\Logic\UIManager.cs" />
     <Compile Include="Assets\Script\UI\Hero\HeroCard.cs" />
+    <Compile Include="Assets\Script\Logic\ResourcesManager.cs" />
     <Compile Include="Assets\Script\UI\HeroDetail\HeroDetailUI.cs" />
     <Compile Include="Assets\Script\UI\Hero\HeroUI.cs" />
     <Compile Include="Assets\Script\Main.cs" />
