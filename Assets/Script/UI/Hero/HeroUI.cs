@@ -10,49 +10,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HeroData
+public class HeroUI : BaseUI
 {
-    public string name;
-    public int rarity;
-    public int star;
-    public string icon;
-
-    public static HeroData RandomCreate(int iIndex)
-    {
-        return new HeroData()
-        {
-            name = "HeroName_"+ iIndex,
-            rarity = Random.Range(1,3),
-            star = Random.Range(3,5),
-            icon = iIndex % 2 == 0 ? "H_Monkey01_portrait" : "H_Panda01_portrait",
-        };
-    }
-}
-
-public class HeroUI : MonoBehaviour
-{
-    public Button m_Button_Close;
+    public Button m_kCloseButton;
     public ScrollRect m_kScrollRect;
-    public GridLayoutGroup m_kContent;
     
-    // Start is called before the first frame update
-    void Start()
+    private List<HeroConfig> m_kAllHeroList = new List<HeroConfig>();
+    private GameObject m_kHeroCardAsset = null;
+    private Dictionary<int, BaseUI> kHeroCardMap = new Dictionary<int, BaseUI>();
+
+    public void OnBtn_Close()
     {
-        //随机生成20个英雄数据和卡牌
-        for (int iIndex = 0; iIndex < 20; iIndex++)
-        {
-            var kData = HeroData.RandomCreate(iIndex);
-            var kAsset = UIManager.Instance.m_CardAsset;
-            var kInstance = Instantiate(kAsset);
-            kInstance.transform.SetParent(m_kContent.transform,false);
-            HeroCard kCard = kInstance.GetComponent<HeroCard>();
-            kCard.SetHeroData(kData);
-        }
-        m_Button_Close.onClick.AddListener(OnBtn_Click);
+        Close();
     }
     
-    void OnBtn_Click()
+    public override void Show()
     {
-        gameObject.SetActive(false);
+        base.Show();
+        m_kCloseButton.onClick.AddListener(OnBtn_Close);
+        ConfigManager.Instance.GetAllHeroConfig(ref m_kAllHeroList);
+        
+        UIManager.Instance.LoadAsset("UI/Prefab/HeroCard.prefab",(kAssetName,asset) => {
+            if(asset == null)
+                return;
+            m_kHeroCardAsset = asset;
+            _createHeroCard();
+        });
+    }
+
+    private void _createHeroCard()
+    {
+        for (int iIndex = 0; iIndex < Mathf.Min(50,m_kAllHeroList.Count); iIndex++)
+        {
+            HeroConfig kConfig = m_kAllHeroList[iIndex];
+            var kInstance = Instantiate(m_kHeroCardAsset, m_kScrollRect.content);
+            kInstance.name = "HeroCard|";
+            HeroCard kCard = kInstance.GetComponent<HeroCard>();
+            kCard.OnInit("UI/Prefab/HeroCard.prefab", "HeroCard");
+            kCard.SetHeroData(kConfig);
+            
+            kHeroCardMap.Add(kConfig.id,kCard);
+        }
     }
 }

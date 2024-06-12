@@ -264,9 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768be7f6158d7d1459f0cf468f5c4ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Button_Close: {fileID: 4908369290882514740}
+  m_kCloseButton: {fileID: 4908369290882514740}
   m_kScrollRect: {fileID: 5490045636726522026}
-  m_kContent: {fileID: 6092492825797222681}
 --- !u!1 &3471502644689562618
 GameObject:
   m_ObjectHideFlags: 0

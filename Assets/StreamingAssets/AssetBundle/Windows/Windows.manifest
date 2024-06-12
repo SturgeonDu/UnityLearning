@@ -1,13 +1,21 @@
 ManifestFileVersion: 0
-CRC: 4075465221
+CRC: 3794659667
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: ui/prefab/herocard.bd
+      Name: ui/textures/textures.bd
       Dependencies: {}
     Info_1:
-      Name: ui/prefab/heroui.bd
+      Name: ui/atlas/mainatlas.bd
       Dependencies: {}
     Info_2:
+      Name: ui/prefab/herocard.bd
+      Dependencies:
+        Dependency_0: ui/textures/textures.bd
+    Info_3:
+      Name: ui/prefab/heroui.bd
+      Dependencies:
+        Dependency_0: ui/textures/textures.bd
+    Info_4:
       Name: ui/prefab/node_top.bd
       Dependencies: {}

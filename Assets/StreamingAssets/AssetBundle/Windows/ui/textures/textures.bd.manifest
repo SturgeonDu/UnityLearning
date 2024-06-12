@@ -1,0 +1,87 @@
+ManifestFileVersion: 0
+CRC: 2288473852
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5062caf86e3505d92114d450f5ea4075
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 5062caf86e3505d92114d450f5ea4075
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/UI/Textures/characters/H_SnowFox_portrait.png
+- Assets/UI/Textures/characters/H_UnicornYounger_portrait.png
+- Assets/UI/Textures/characters/H_Panther_portrait.png
+- Assets/UI/Textures/characters/H_Cantaur_portrait.png
+- Assets/UI/Textures/characters/H_Parrot01_portrait.png
+- Assets/UI/Textures/characters/H_Bird08_portrait.png
+- Assets/UI/Textures/characters/H_GiantApe_portrait.png
+- Assets/UI/Textures/characters/H_Dragon_Earth01_portrait.png
+- Assets/UI/Textures/characters/H_Shark_portrait.png
+- Assets/UI/Textures/characters/H_Bushido_portrait.png
+- Assets/UI/Textures/characters/H_CivetCat_portrait.png
+- Assets/UI/Textures/characters/H_Flyer_portrait.png
+- Assets/UI/Textures/characters/H_Scorpion01_portrait.png
+- Assets/UI/Textures/characters/H_Fox03_portrait.png
+- Assets/UI/Textures/characters/H_Monkey01_portrait.png
+- Assets/UI/Textures/characters/H_Wolf02_portrait.png
+- Assets/UI/Textures/characters/H_Helios_portrait.png
+- Assets/UI/Textures/characters/H_RoseCat_portrait.png
+- Assets/UI/Textures/characters/H_Sheep01_portrait.png
+- Assets/UI/Textures/characters/H_TigerWarrior_portrait.png
+- Assets/UI/Textures/characters/H_Walrus_portrait.png
+- Assets/UI/Textures/characters/H_Catgirl02_portrait.png
+- Assets/UI/Textures/characters/H_Panda01_portrait.png
+- Assets/UI/Textures/bg/Skill_BG_02.png
+- Assets/UI/Textures/characters/H_Sailfish_portrait.png
+- Assets/UI/Textures/characters/H_RagdollFencer_portrait.png
+- Assets/UI/Textures/characters/H_Dog06_portrait.png
+- Assets/UI/Textures/characters/H_Fish02_portrait.png
+- Assets/UI/Textures/characters/H_Bird06_portrait.png
+- Assets/UI/Textures/characters/H_Leopard01_portrait.png
+- Assets/UI/Textures/characters/H_Rabbitgirl02_portrait.png
+- Assets/UI/Textures/characters/H_WerewolfKiller_portrait.png
+- Assets/UI/Textures/characters/H_Dragon_Water01_portrait.png
+- Assets/UI/Textures/characters/H_Rabbitgirl01_portrait.png
+- Assets/UI/Textures/characters/Empty_Hero.png
+- Assets/UI/Textures/characters/H_Dog01_portrait.png
+- Assets/UI/Textures/characters/H_Tauren_portrait.png
+- Assets/UI/Textures/characters/H_Catgirl03_portrait.png
+- Assets/UI/Textures/characters/H_Dragon_Wind01_portrait.png
+- Assets/UI/Textures/characters/H_Bear02_portrait.png
+- Assets/UI/Textures/characters/H_Rhinoceros01_portrait.png
+- Assets/UI/Textures/characters/H_CentaurGirl_portrait.png
+- Assets/UI/Textures/characters/H_Marmot01_portrait.png
+- Assets/UI/Textures/characters/H_Leopardgirl01_portrait.png
+- Assets/UI/Textures/characters/H_Driver_portrait.png
+- Assets/UI/Textures/characters/H_DukeVampire_portrait.png
+- Assets/UI/Textures/characters/H_Catgirl05_portrait.png
+- Assets/UI/Textures/characters/H_Dog03_portrait.png
+- Assets/UI/Textures/characters/H_UnicornOlder_portrait.png
+- Assets/UI/Textures/bg/blue.png
+- Assets/UI/Textures/bg/purple.png
+- Assets/UI/Textures/characters/H_Lion02_portrait.png
+- Assets/UI/Textures/characters/H_Toad01_portrait.png
+- Assets/UI/Textures/characters/H_Catgirl01_portrait.png
+- Assets/UI/Textures/bg/gold.png
+- Assets/UI/Textures/characters/H_Test_portrait.png
+- Assets/UI/Textures/characters/H_Raccoon01_portrait.png
+- Assets/UI/Textures/characters/H_Bird03_portrait.png
+- Assets/UI/Textures/characters/H_DeerGirl_portrait.png
+- Assets/UI/Textures/characters/H_Lion_portrait.png
+- Assets/UI/Textures/characters/H_Bird07_portrait.png
+- Assets/UI/Textures/characters/H_Catgirl06_portrait.png
+- Assets/UI/Textures/characters/H_Cat05_portrait.png
+- Assets/UI/Textures/characters/H_Fish03_portrait.png
+- Assets/UI/Textures/characters/H_Monkey02_portrait.png
+- Assets/UI/Textures/characters/H_Dragon_Fire01_portrait.png
+Dependencies: []

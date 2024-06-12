@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1267901689
+CRC: 3908891755
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1a6980a9849e9e92be2419fd5a5c8181
+    Hash: 65b20fc3efe59835b0c2f2c6d9cacad3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 60360a7e889bf9b6db49d3b9854d1920
+    Hash: 6cdeaed8069d7275b491da7a7f954834
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 1a6980a9849e9e92be2419fd5a5c8181
+    Hash: 65b20fc3efe59835b0c2f2c6d9cacad3
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -83,4 +83,5 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.UI.SpriteState
 Assets:
 - Assets/UI/Prefab/HeroUI.prefab
-Dependencies: []
+Dependencies:
+- D:/Github/UnityLearning/Assets/StreamingAssets/AssetBundle/Windows/ui/textures/textures.bd

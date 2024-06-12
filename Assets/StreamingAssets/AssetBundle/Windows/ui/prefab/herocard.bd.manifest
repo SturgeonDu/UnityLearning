@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 834479666
+CRC: 1205309001
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 90c35837b9ec894dcab0100d8f7985de
+    Hash: 0ca530062dcab1439fce61af6754e185
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5db3a494be065625cbad4c184feab039
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 90c35837b9ec894dcab0100d8f7985de
+    Hash: 0ca530062dcab1439fce61af6754e185
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -53,4 +53,5 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
 Assets:
 - Assets/UI/Prefab/HeroCard.prefab
-Dependencies: []
+Dependencies:
+- D:/Github/UnityLearning/Assets/StreamingAssets/AssetBundle/Windows/ui/textures/textures.bd

@@ -8,8 +8,10 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
-using Object = UnityEngine.Object;
+using UnityEngine.U2D;
 
 /// <summary>
 /// 资源加载容器：
@@ -30,33 +32,34 @@ public class ResourcesManager : MonoBehaviour
             return _instance;
         }
     }
-    
-    //同步加载(Sync Load)
-    public T LoadAsset<T>(string kPath) where T : Object
+
+    private Dictionary<string, SpriteAtlas> m_kSpriteAtlasMap = new Dictionary<string, SpriteAtlas>();
+
+    public void Init()
     {
-        return Resources.Load<T>(kPath);
+        StartCoroutine(_asyncInit("MainAtlas"));
     }
 
-    ///异步加载(Async Load),协程(Coroutine),委托（Delegate）,C# Lambda表达式
-    public void LoadAssetAsync<T>(string kPath,Action<Object> kCallback) where T : Object
+    public Sprite LoadSprite(string kAtlasName, string kSpriteName)
     {
-        StartCoroutine(_asyncLoad<T>(kPath, kCallback));
+        if (!m_kSpriteAtlasMap.ContainsKey(kAtlasName))
+            return null;
+        return m_kSpriteAtlasMap[kAtlasName].GetSprite(kSpriteName);
     }
 
-    public void Unload()
+    private IEnumerator _asyncInit(string kAtlasName)
     {
-        Resources.UnloadUnusedAssets();
-    }
-
-    private IEnumerator _asyncLoad<T>(string kPath,Action<Object> kCallback) where T : Object
-    {
-        ResourceRequest kRequest = Resources.LoadAsync<T>(kPath);
-        yield return kRequest;
-    
-        if (kRequest.isDone)
+        while (!AssetBundleManager.Instance.IsAssetBundleLoaded(kAtlasName.ToLower()))
         {
-            kCallback.Invoke(kRequest.asset);
-            yield break;
+            yield return new WaitForEndOfFrame();
         }
+        SpriteAtlas kAtlas = AssetBundleManager.Instance.LoadAtlas(kAtlasName);
+        if(kAtlas != null)
+            m_kSpriteAtlasMap.Add(kAtlasName,kAtlas);
+    }
+    
+    public void UnInit()
+    {
+        
     }
 }
